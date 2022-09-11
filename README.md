@@ -1,2 +1,2 @@
 # php-tasks
-php taaks by Orange Coding Academy 
+php tasks by Orange Coding Academy 
