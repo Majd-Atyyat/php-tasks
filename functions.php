@@ -84,16 +84,16 @@ function swap($x, $y) {
   echo "y = $y \n";
 
   //Swap technique
-  $x = $x ^ $y;
-  $y = $x ^ $y;
-  $x = $x ^ $y;
+$swap = $x;
+$x = $y;
+$y = $swap;
 
   echo "After Swap.\n";
   echo "x = $x \n";
   echo "y = $y \n";
 }
 
-echo swap(10, 25);
+echo swap(11, 2);
 ?>
 
 <!-- 6 -->
@@ -148,12 +148,12 @@ echo "<br>";
 // PHP code to check for Palindrome number in PHP
 // Function to check for Palindrome
 function Palindrome($number){ 
-    $temp = $number; 
+    $swap = $number; 
     $new = 0; 
-    while (floor($temp)) { 
-        $d = $temp % 10; 
+    while (floor($swap)) { 
+        $d = $swap % 10; 
         $new = $new * 10 + $d; 
-        $temp = $temp/10; 
+        $swap = $swap/10; 
     } 
     if ($new == $number){ 
         return 1; 

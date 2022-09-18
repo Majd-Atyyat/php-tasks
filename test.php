@@ -69,12 +69,9 @@ echo "<br>"
 ?>
 <!-- 7 -->
 <?php
-function password_generate($chars) 
-{
+
   $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
-  return substr(str_shuffle($data), 0, $chars);
-}
-  echo password_generate(7)."\n";
+  echo substr(str_shuffle($data), 0, 8);
   echo "<br>"
 
 ?>
@@ -87,11 +84,11 @@ echo"<br>";
 
 <!-- 9 -->
 <?php
-$first = "dragonball";
-$second = "dragonboll";
+$first = "dragonballr";
+$second = "dragonbolle";
 
 for ($i = 0; $i < strlen($first); $i++) {
-    if (substr($first, $i, 1) !== substr($second, $i, 1)) {
+    if (substr($first, $i,1 ) !== substr($second, $i,1 )) {
         echo "frist diff between two strings at position $i:" . substr($first, $i, 1) . " vs " . substr($second, $i, 1) . "<br>";
         break;
     }
@@ -154,8 +151,9 @@ echo preg_replace('/[^a-zA-Z0-9_ -]/s',' ',$str);
 <!-- 17 -->
 <?php
 echo "<br>";
-$my_string = 'The quick brown fox jumps over the lazy dog';
-echo implode(' ', array_slice(explode(' ', $my_string), 0, 5))."\n";
+$my_string = 'The/quick>brown fox jumps over the lazy dog';
+$string= preg_replace('/[^a-zA-Z0-9_ -]/s',' ',$my_string);
+echo implode(' ', array_slice(explode(' ', $string), 0, 5))."\n";
 ?>
 <!-- 18 -->
 <?php
